@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="description" content="Discover scholarships, check eligibility and track your scholarship journey with GRANTLY.">
+
+    <meta property="og:title" content="GRANTLY">
+    <meta property="og:description" content="Discover scholarships, check eligibility and track your scholarship journey with GRANTLY.">
+    <meta property="og:type" content="website">
+<title>GRANTLY | Find Your Future</title>
+    <link rel="stylesheet" href="new 1.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="navbar" role="banner">
+        <a href="#" class="logo" onclick="showPage('home')">
+            <span class="logo-icon" aria-hidden="true">G</span>
+            GRANTLY<span class="dot" aria-hidden="true">.</span>
+        </a>
+
+        <nav role="navigation" aria-label="Main navigation">
+            <a href="#" onclick="showPage('home')" aria-current="page">Home</a>
+            <a href="#" onclick="showPage('explore')">Explore</a>
+            <a href="#" onclick="showPage('eligibility')">Eligibility</a>
+            <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" title="Toggle dark/light theme" aria-label="Toggle dark/light theme">◐</button>
+            <button class="btn btn-outline" onclick="showPage('login')" aria-label="Login to your account">Login</button>
+            <button class="btn btn-primary" onclick="showPage('register')" aria-label="Create a new account">Get Started ↗</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- HOME PAGE -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="eyebrow">✦ YOUR FUTURE STARTS HERE</span>
+                    <h1>Dream Big.<br>Study More.<br><span>Worry Less.</span></h1>
+                    <p>
+                        Discover scholarships that match your dreams.
+                        Find financial opportunities, check eligibility
+                        and take the next step towards your future.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large" onclick="showPage('explore')" aria-label="Explore available scholarships">
+                            Explore Scholarships →
+                        </button>
+                        <button class="btn btn-outline btn-large" onclick="showPage('eligibility')" aria-label="Check your scholarship eligibility">
+                            Check Eligibility
+                        </button>
+                    </div>
+
+                    <div class="hero-trust">
+                        <span aria-hidden="true">✓</span> Easy discovery
+                        <span aria-hidden="true">✓</span> Smart matching
+                        <span aria-hidden="true">✓</span> Application tracking
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="orbit orbit-one"></div>
+                    <div class="orbit orbit-two"></div>
+                    <div class="floating-card card-one">
+                        <span class="float-icon">🎓</span>
+                        <div>
+                            <strong>Find your match</strong>
+                            <small>Scholarships made simple</small>
+                        </div>
+                    </div>
+
+                    <div class="scholarship-illustration">
+                        <div class="illustration-circle">🎓</div>
+                        <div class="illustration-text">YOUR FUTURE</div>
+                        <div class="illustration-small">IS WORTH INVESTING IN</div>
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <span class="float-icon">✨</span>
+                        <div>
+                            <strong>Smart eligibility</strong>
+                            <small>Discover your opportunities</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-strip">
+                <div><strong>01</strong><span>Discover</span></div>
+                <div><strong>02</strong><span>Check eligibility</span></div>
+                <div><strong>03</strong><span>Apply confidently</span></div>
+                <div><strong>04</strong><span>Track progress</span></div>
+            </div>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">EXPLORE OPPORTUNITIES</span>
+                        <h2>Scholarships worth discovering</h2>
+                        <p>Explore sample scholarship opportunities and find your next step.</p>
+                    </div>
+                    <button class="text-button" onclick="showPage('explore')" aria-label="View all scholarships">View all →</button>
+                </div>
+                <div id="featuredScholarships" class="scholarship-grid" role="region" aria-label="Featured scholarships"></div>
+            </section>
+
+            <section class="feature-section">
+                <div class="section-heading centered">
+                    <span class="eyebrow">WHY GRANTLY?</span>
+                    <h2>Your scholarship journey, simplified.</h2>
+                    <p>Everything you need to explore and manage opportunities in one place.</p>
+                </div>
+
+                <div class="feature-grid" role="region" aria-label="Key features">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🔍</div>
+                        <h3>Smart Discovery</h3>
+                        <p>Explore opportunities using filters that help narrow down your search.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">🎯</div>
+                        <h3>Eligibility Match</h3>
+                        <p>Check your profile against scholarship requirements.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📁</div>
+                        <h3>Document Readiness</h3>
+                        <p>Keep track of documents you may need before applying.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">📊</div>
+                        <h3>Application Tracker</h3>
+                        <p>Organise your saved opportunities and application progress.</p>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <!-- EXPLORE PAGE -->
+        <section id="explore" class="page">
+            <div class="page-banner">
+                <span class="eyebrow">FIND YOUR OPPORTUNITY</span>
+                <h1>Explore Scholarships</h1>
+                <p>Search and discover opportunities that fit your education goals.</p>
+            </div>
+
+            <div class="filter-panel" role="search">
+                <input 
+                    id="searchInput" 
+                    type="search" 
+                    placeholder="🔍 Search scholarships..." 
+                    oninput="renderScholarships()"
+                    aria-label="Search scholarships by name or keyword">
+
+                <select 
+                    id="categoryFilter" 
+                    onchange="renderScholarships()"
+                    aria-label="Filter scholarships by category">
+                    <option value="">All categories</option>
+                    <option value="Government">Government</option>
+                    <option value="Merit">Merit-based</option>
+                    <option value="Private">Private</option>
+                    <option value="Need-based">Need-based</option>
+                </select>
+
+                <select 
+                    id="levelFilter" 
+                    onchange="renderScholarships()"
+                    aria-label="Filter scholarships by education level">
+                    <option value="">All education levels</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Postgraduate">Postgraduate</option>
+                </select>
+
+                <select 
+                    id="sortFilter" 
+                    onchange="renderScholarships()"
+                    aria-label="Sort scholarships">
+                    <option value="default">Sort by: Recommended</option>
+                    <option value="amount">Amount: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+
+            <p id="resultCount" class="result-count" role="status" aria-live="polite"></p>
+            <div id="scholarshipList" class="scholarship-grid" role="region" aria-label="Scholarship search results"></div>
+        </section>
+
+        <!-- SCHOLARSHIP DETAILS -->
+        <section id="details" class="page">
+            <button class="back-button" onclick="showPage('explore')" aria-label="Go back to scholarship list">← Back to scholarships</button>
+            <div id="scholarshipDetails" role="region" aria-label="Scholarship details"></div>
+        </section>
+
+        <!-- ELIGIBILITY PAGE -->
+        <section id="eligibility" class="page">
+            <div class="page-banner">
+                <span class="eyebrow">SMART ELIGIBILITY CHECKER</span>
+                <h1>Find your scholarship match.</h1>
+                <p>Enter your details to compare your profile with sample scholarship criteria.</p>
+            </div>
+
+            <div class="form-card">
+                <h2>Your academic profile</h2>
+                <p class="muted">Demo matching only. Your profile is processed in this browser; results are not official eligibility decisions.</p>
+
+                <form id="eligibilityForm" novalidate>
+                    <fieldset>
+                        <legend class="sr-only">Academic Profile Information</legend>
+                        
+                        <label for="educationLevel">Education level</label>
+                        <select id="educationLevel" required aria-describedby="educationHelp">
+                            <option value="">Select education level</option>
+                            <option value="Undergraduate">Undergraduate</option>
+                            <option value="Postgraduate">Postgraduate</option>
+                        </select>
+
+                        <label for="course">Course / Stream</label>
+                        <input 
+                            id="course" 
+                            type="text" 
+                            placeholder="e.g. Engineering, Arts, Science" 
+                            required
+                            autocomplete="off"
+                            aria-describedby="courseHelp">
+
+                        <label for="marks">Academic percentage</label>
+                        <input 
+                            id="marks" 
+                            type="number" 
+                            min="0" 
+                            max="100" 
+                            placeholder="e.g. 85" 
+                            required
+                            aria-describedby="marksHelp">
+
+                        <label for="income">Annual family income (₹)</label>
+                        <input 
+                            id="income" 
+                            type="number" 
+                            min="0" 
+                            placeholder="e.g. 200000" 
+                            required
+                            autocomplete="off"
+                            aria-describedby="incomeHelp">
+
+                        <label for="studentCategory">Category</label>
+                        <select id="studentCategory" required aria-describedby="categoryHelp">
+                            <option value="">Select category</option>
+                            <option value="General">General</option>
+                            <option value="OBC">OBC</option>
+                            <option value="SC">SC</option>
+                            <option value="ST">ST</option>
+                            <option value="EWS">EWS</option>
+                        </select>
+                    </fieldset>
+
+                    <button class="btn btn-primary btn-full" type="submit" aria-label="Check my scholarship matches">Check My Matches →</button>
+                </form>
+
+                <div id="eligibilityResults" role="region" aria-live="polite" aria-label="Eligibility check results"></div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="page">
+            <div class="dashboard-header">
+                <div>
+                    <span class="eyebrow">YOUR PERSONAL SPACE</span>
+                    <h1>Student Dashboard</h1>
+                    <p>Keep your scholarship journey organised.</p>
+                </div>
+                <button class="btn btn-primary" onclick="showPage('explore')" aria-label="Find more scholarships">+ Find scholarships</button>
+            </div>
+
+            <div class="dashboard-stats">
+                <div class="dashboard-stat">
+                    <span>Saved scholarships</span>
+                    <strong id="savedCount" aria-label="Number of saved scholarships">0</strong>
+                    <small>Opportunities bookmarked</small>
+                </div>
+                <div class="dashboard-stat">
+                    <span>Applications</span>
+                    <strong id="applicationCount" aria-label="Number of applications">0</strong>
+                    <small>Added to your tracker</small>
+                </div>
+                <div class="dashboard-stat">
+                    <span>Documents ready</span>
+                    <strong id="documentCount" aria-label="Documents ready progress">0/5</strong>
+                    <small>Checklist progress</small>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h2>Saved scholarships</h2>
+                        <button class="text-button" onclick="showPage('saved')" aria-label="View all saved scholarships">View all →</button>
+                    </div>
+                    <div id="dashboardSaved" role="region" aria-label="Recently saved scholarships"></div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-heading"><h2>Application progress</h2></div>
+                    <div id="dashboardApplications" role="region" aria-label="Application progress tracker"></div>
+                </div>
+            </div>
+
+            <div class="panel document-panel">
+                <div class="panel-heading">
+                    <h2>Document checklist</h2>
+                    <span class="muted">Tick documents as you prepare them</span>
+                </div>
+                <div id="documentChecklist" role="region" aria-label="Document preparation checklist"></div>
+            </div>
+        </section>
+
+        <!-- SAVED PAGE -->
+        <section id="saved" class="page">
+            <div class="page-banner">
+                <span class="eyebrow">YOUR COLLECTION</span>
+                <h1>Saved Scholarships</h1>
+                <p>Keep your favourite opportunities in one place.</p>
+            </div>
+            <div id="savedScholarships" class="scholarship-grid" role="region" aria-label="Saved scholarships"></div>
+        </section>
+
+        <!-- APPLICATION TRACKER -->
+        <section id="tracker" class="page">
+            <div class="page-banner">
+                <span class="eyebrow">STAY ORGANISED</span>
+                <h1>Application Tracker</h1>
+                <p>Manage the progress of scholarships you are applying for.</p>
+            </div>
+            <div class="panel">
+                <div id="applicationList" role="region" aria-label="Application tracker"></div>
+            </div>
+        </section>
+
+        <!-- LOGIN -->
+        <section id="login" class="page">
+            <div class="form-card auth-card">
+                <div class="auth-logo" aria-hidden="true">G</div>
+                <h1>Welcome back!</h1>
+                <p class="muted">Access your GRANTLY dashboard.</p>
+                <form id="loginForm" novalidate>
+                    <fieldset>
+                        <legend class="sr-only">Login Form</legend>
+                        
+                        <label for="loginEmail">Email address</label>
+                        <input 
+                            type="email" 
+                            id="loginEmail" 
+                            placeholder="you@example.com" 
+                            required
+                            autocomplete="email">
+                        
+                        <label for="loginPassword">Password</label>
+                        <input 
+                            type="password" 
+                            id="loginPassword" 
+                            placeholder="Enter password" 
+                            required
+                            autocomplete="current-password">
+                        
+                        <button class="btn btn-primary btn-full" type="submit" aria-label="Login to your account">Login</button>
+                    </fieldset>
+                </form>
+                <p class="auth-switch">New here? <a href="#" onclick="showPage('register')">Create an account</a></p>
+                <p class="demo-note">Demo mode: this page does not verify accounts. Do not enter a real password or sensitive information.</p>
+            </div>
+        </section>
+
+        <!-- REGISTER -->
+        <section id="register" class="page">
+            <div class="form-card auth-card">
+                <div class="auth-logo" aria-hidden="true">G</div>
+                <h1>Create your account</h1>
+                <p class="muted">Start your scholarship journey with GRANTLY.</p>
+                <form id="registerForm" novalidate>
+                    <fieldset>
+                        <legend class="sr-only">Registration Form</legend>
+                        
+                        <label for="registerName">Full name</label>
+                        <input 
+                            type="text" 
+                            id="registerName" 
+                            placeholder="Your full name" 
+                            required
+                            autocomplete="name">
+                        
+                        <label for="registerEmail">Email address</label>
+                        <input 
+                            type="email" 
+                            id="registerEmail" 
+                            placeholder="you@example.com" 
+                            required
+                            autocomplete="email">
+                        
+                        <label for="registerPassword">Password</label>
+                        <input 
+                            type="password" 
+                            id="registerPassword" 
+                            minlength="6" 
+                            placeholder="At least 6 characters" 
+                            required
+                            autocomplete="new-password">
+                        
+                        <button class="btn btn-primary btn-full" type="submit" aria-label="Create your account">Create Account</button>
+                    </fieldset>
+                </form>
+                <p class="auth-switch">Already registered? <a href="#" onclick="showPage('login')">Login</a></p>
+                <p class="demo-note">Demo profile only: your name and email are saved in this browser. No secure account is created. Do not use a real password.</p>
+            </div>
+        </section>
+
+        <!-- AI ASSISTANT -->
+        <section id="assistant" class="page">
+            <div class="page-banner">
+                <span class="eyebrow">YOUR SCHOLARSHIP GUIDE</span>
+                <h1>GRANTLY Assistant ✨</h1>
+                <p>Ask questions about finding and applying for scholarships.</p>
+            </div>
+            <div class="chat-panel">
+                <div id="chatMessages" class="chat-messages" role="log" aria-live="polite" aria-label="Chat messages">
+                    <div class="chat-bubble bot">
+                        Hi! I'm your GRANTLY demo assistant. Ask me about scholarship discovery, eligibility or application preparation.
+                    </div>
+                </div>
+                <form id="chatForm" class="chat-input" novalidate>
+                    <input 
+                        id="chatInput" 
+                        placeholder="Ask your question..." 
+                        required
+                        autocomplete="off"
+                        aria-label="Type your question">
+                    <button class="btn btn-primary" type="submit" aria-label="Send message">Send ↑</button>
+                </form>
+                <p class="demo-note">This is a sample assistant, not a live AI connection.</p>
+            </div>
+        </section>
+
+        <!-- ADMIN -->
+        <section id="admin" class="page">
+            <div class="page-banner">
+                <span class="eyebrow">PLATFORM MANAGEMENT</span>
+                <h1>Admin Dashboard</h1>
+                <p>Manage the sample scholarship records stored in this browser.</p>
+            </div>
+            <div class="panel">
+                <h2>Add a scholarship</h2>
+                <form id="adminForm" class="admin-form" novalidate>
+                    <fieldset>
+                        <legend class="sr-only">Add New Scholarship</legend>
+                        
+                        <input 
+                            id="adminName" 
+                            placeholder="Scholarship name" 
+                            required
+                            autocomplete="off">
+                        
+                        <input 
+                            id="adminAmount" 
+                            placeholder="Amount (e.g. ₹50,000)" 
+                            required
+                            autocomplete="off">
+                        
+                        <input 
+                            id="adminCategory" 
+                            placeholder="Category (e.g. Government)" 
+                            required
+                            autocomplete="off">
+                        
+                        <input 
+                            id="adminLevel" 
+                            placeholder="Education level (e.g. Undergraduate)" 
+                            required
+                            autocomplete="off">
+                        
+                        <label for="adminDeadline">Application Deadline</label>
+                        <input 
+                            id="adminDeadline" 
+                            type="date" 
+                            required
+                            aria-label="Scholarship application deadline">
+                        
+                        <input 
+                            id="adminLink" 
+                            type="url" 
+                            placeholder="Official application URL" 
+                            required
+                            autocomplete="url">
+                        
+                        <button class="btn btn-primary" type="submit" aria-label="Add new scholarship">Add Scholarship</button>
+                    </fieldset>
+                </form>
+                <p class="demo-note">Admin controls are for a local demo only. There is no secure admin login.</p>
+                <div id="adminScholarshipList" role="region" aria-label="Scholarship list"></div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="page">
+            <div class="page-banner">
+                <span class="eyebrow">ABOUT GRANTLY</span>
+                <h1>Making opportunities easier to find.</h1>
+                <p>We believe financial barriers should not stop students from pursuing education.</p>
+            </div>
+            <div class="about-grid">
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🌱</div>
+                    <h3>Our Mission</h3>
+                    <p>Make scholarship discovery simpler and help students understand their opportunities.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🚀</div>
+                    <h3>Our Vision</h3>
+                    <p>A world where every student can discover financial support for their education.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🤝</div>
+                    <h3>Our Approach</h3>
+                    <p>Bring discovery, eligibility guidance and application organisation together.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-main">
+            <div>
+                <a href="#" class="logo footer-logo" onclick="showPage('home')" aria-label="GRANTLY home">
+                    <span class="logo-icon" aria-hidden="true">G</span> GRANTLY<span class="dot" aria-hidden="true">.</span>
+                </a>
+                <p>Find opportunities. Build possibilities.</p>
+            </div>
+            <nav>
+                <h4>Explore</h4>
+                <a href="#" onclick="showPage('explore')">Scholarships</a>
+                <a href="#" onclick="showPage('eligibility')">Eligibility checker</a>
+                <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+            </nav>
+            <nav>
+                <h4>My GRANTLY</h4>
+                <a href="#" onclick="showPage('saved')">Saved scholarships</a>
+                <a href="#" onclick="showPage('tracker')">Application tracker</a>
+                <a href="#" onclick="showPage('assistant')">AI assistant</a>
+            </nav>
+            <nav>
+                <h4>Information</h4>
+                <a href="#" onclick="showPage('about')">About us</a>
+                <span class="muted">Contact details coming soon</span>
+                <a href="#" onclick="showPage('admin')">Demo admin</a>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 GRANTLY. Student scholarship discovery platform.</span>
+            <span>Built to make opportunities accessible. ✦</span>
+        </div>
+    </footer>
+
+    <!-- Floating assistant -->
+    <button class="chat-float" onclick="showPage('assistant')" title="Open scholarship assistant" aria-label="Open GRANTLY scholarship assistant">✦</button>
+
+    <div id="toast" class="toast" role="status" aria-live="assertive" aria-atomic="true"></div>
+
+    <script src="eligibility.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
